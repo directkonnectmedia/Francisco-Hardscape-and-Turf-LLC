@@ -9,11 +9,12 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-[100svh] sm:min-h-[600px] sm:h-[90vh] flex items-center justify-center overflow-hidden bg-brand-black">
       {/*
-        Animated Paver Walkway with Landscape Lighting Background.
-        Brightness/saturation flicker is applied DIRECTLY to the photo so the
-        actual solar lights in the image (the brightest pixels) appear to
-        pulse and flicker. The dark overlay sits in a separate layer so it
-        never gets brightened along with the lights.
+        Animated paver walkway with landscape lighting background.
+        Brightness/saturation slowly ebb and flow on the photo itself so the
+        actual solar lights in the image (the brightest pixels) breathe like
+        a candle - smoothly dimming and elevating instead of flickering.
+        The dark overlay sits in a separate layer so it never gets brightened
+        along with the lights.
       */}
       <motion.div
         className="absolute inset-0 bg-cover z-0"
@@ -25,29 +26,26 @@ export default function Hero() {
         animate={{
           scale: [1, 1.06, 1],
           filter: [
-            "brightness(0.95) saturate(1.05) contrast(1)",
-            "brightness(1.55) saturate(1.35) contrast(1.1)",
-            "brightness(1.05) saturate(1.05)",
-            "brightness(1.7) saturate(1.45) contrast(1.15)",
-            "brightness(0.9) saturate(1)",
-            "brightness(1.6) saturate(1.4) contrast(1.1)",
-            "brightness(1) saturate(1.05)",
+            "brightness(0.95) saturate(1.05)",
+            "brightness(1.35) saturate(1.25)",
+            "brightness(0.95) saturate(1.05)",
           ],
         }}
         transition={{
           scale: { duration: 22, repeat: Infinity, ease: "easeInOut" },
-          filter: { duration: 2.6, repeat: Infinity, ease: "easeInOut" },
+          filter: { duration: 5.5, repeat: Infinity, ease: "easeInOut" },
         }}
       />
 
-      {/* Static dark overlay so the brightness flicker doesn't wash out the section */}
+      {/* Static dark overlay so the breathing brightness doesn't wash out the section */}
       <div className="absolute inset-0 z-0 bg-brand-black/55 pointer-events-none" />
 
       {/*
         Independent warm-glow halos placed exactly on top of each solar light
-        in the photo. Each one flickers at its own rhythm using mix-blend-mode
-        screen so it only ADDS brightness where the photo is already lit.
-        Coordinates were measured from the source image:
+        in the photo. Each one breathes like a candle - dimming and elevating
+        smoothly with its own slow rhythm - using mix-blend-mode screen so it
+        only ADDS brightness where the photo is already lit. Coordinates were
+        measured from the source image:
           Light 1 (largest, foreground):  ~37% x, ~78% y
           Light 2 (mid):                  ~50% x, ~42% y
           Light 3 (small back):           ~67% x, ~22% y
@@ -59,8 +57,8 @@ export default function Hero() {
           background:
             "radial-gradient(circle 130px at 37% 78%, rgba(255,236,179,0.95), rgba(255,200,120,0.5) 35%, transparent 70%)",
         }}
-        animate={{ opacity: [0.55, 1, 0.4, 0.95, 0.5, 1, 0.6] }}
-        transition={{ duration: 2.3, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute inset-0 z-0 mix-blend-screen pointer-events-none hidden sm:block"
@@ -68,8 +66,8 @@ export default function Hero() {
           background:
             "radial-gradient(circle 90px at 50% 42%, rgba(255,236,179,0.9), rgba(255,200,120,0.4) 35%, transparent 70%)",
         }}
-        animate={{ opacity: [0.7, 0.3, 0.95, 0.45, 1, 0.5, 0.85] }}
-        transition={{ duration: 1.9, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+        animate={{ opacity: [0.55, 1, 0.55] }}
+        transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut", delay: 1.1 }}
       />
       <motion.div
         className="absolute inset-0 z-0 mix-blend-screen pointer-events-none hidden sm:block"
@@ -77,8 +75,8 @@ export default function Hero() {
           background:
             "radial-gradient(circle 60px at 67% 22%, rgba(255,236,179,0.85), rgba(255,200,120,0.35) 40%, transparent 70%)",
         }}
-        animate={{ opacity: [0.4, 0.9, 0.5, 1, 0.35, 0.95, 0.45] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
+        animate={{ opacity: [0.45, 0.95, 0.45] }}
+        transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
       />
       <motion.div
         className="absolute inset-0 z-0 mix-blend-screen pointer-events-none hidden sm:block"
@@ -86,15 +84,15 @@ export default function Hero() {
           background:
             "radial-gradient(circle 40px at 76% 13%, rgba(255,236,179,0.8), transparent 70%)",
         }}
-        animate={{ opacity: [0.3, 0.85, 0.4, 1, 0.45, 0.9, 0.5] }}
-        transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+        animate={{ opacity: [0.4, 0.9, 0.4] }}
+        transition={{ duration: 4.0, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
       />
 
       {/*
         Mobile fallback: on small screens the photo gets cropped, so the
         precisely-positioned light halos no longer line up. Instead, blanket
-        the bottom of the screen with a single warm flickering glow that
-        always covers wherever the photo's lights end up rendering.
+        the bottom of the screen with a single warm candle-glow that always
+        covers wherever the photo's lights end up rendering.
       */}
       <motion.div
         className="absolute inset-0 z-0 mix-blend-screen pointer-events-none sm:hidden"
@@ -102,8 +100,8 @@ export default function Hero() {
           background:
             "radial-gradient(ellipse 90% 55% at 50% 80%, rgba(255,220,150,0.55), transparent 70%)",
         }}
-        animate={{ opacity: [0.4, 0.95, 0.45, 1, 0.5, 0.95, 0.55] }}
-        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ opacity: [0.5, 0.95, 0.5] }}
+        transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20 sm:pt-16">
