@@ -28,13 +28,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom Garden Trowel Cursor - only on devices with a real mouse pointer.
-   Touch / coarse pointer devices (phones, tablets) are unaffected, so the
-   site stays fully mobile-friendly. */
+/* Custom animated-style Shovel Cursor - only on devices with a real mouse
+   pointer. Touch / coarse pointer devices (phones, tablets) are unaffected,
+   so the site stays fully mobile-friendly. */
 @media (hover: hover) and (pointer: fine) {
   html,
   body {
-    cursor: url("/cursor-trowel.svg") 4 28, auto;
+    cursor: url("/cursor-shovel.svg") 3 29, auto;
   }
 
   a,
@@ -47,7 +47,7 @@ html {
   select,
   label[for],
   summary {
-    cursor: url("/cursor-trowel-pointer.svg") 4 28, pointer;
+    cursor: url("/cursor-shovel-pointer.svg") 3 29, pointer;
   }
 
   input[type="text"],

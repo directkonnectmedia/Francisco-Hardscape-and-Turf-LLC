@@ -54,10 +54,10 @@ const services = [
     id: "yard-cleanups",
     title: "Yard Cleanups",
     description:
-      "Comprehensive yard cleanups to clear out debris, overgrowth, and prepare your outdoor spaces for the season.",
-    features: ["Debris Removal", "Pruning", "Refresh"],
+      "Comprehensive yard cleanups to clear out debris, overgrowth, and leave your lawn perfectly manicured for the season.",
+    features: ["Debris Removal", "Mowing & Edging", "Seasonal Refresh"],
     image:
-      "https://images.unsplash.com/photo-1771317778033-3473a576c5e9?q=80&w=2000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1764969370921-7c8df49171cd?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "sprinkler-repairs",
@@ -66,7 +66,7 @@ const services = [
       "Fast and reliable sprinkler system diagnostics and repair to keep your natural plants healthy and hydrated.",
     features: ["Leak Repair", "Head Replacement", "Timer Setup"],
     image:
-      "https://images.unsplash.com/photo-1769339764809-522564cf34c9?q=80&w=2000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1770664945615-52203ab54c88?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "weed-spraying",
