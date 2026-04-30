@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import LeafLogo from "./LeafLogo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +13,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-2xl mr-1">🌱</span>
+            <LeafLogo size={36} className="mr-1 shrink-0" />
             <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-white to-brand-green bg-clip-text text-transparent group-hover:from-white group-hover:to-brand-green-hover transition-all leading-tight">
+              <span className="text-base sm:text-lg font-bold tracking-tight bg-gradient-to-r from-white to-brand-green bg-clip-text text-transparent group-hover:from-white group-hover:to-brand-green-hover transition-all leading-tight">
                 Francisco Hardscape
               </span>
-              <span className="text-xs text-brand-orange font-semibold tracking-widest uppercase">
+              <span className="text-[10px] sm:text-xs text-brand-orange font-semibold tracking-widest uppercase">
                 & Turf LLC
               </span>
             </div>

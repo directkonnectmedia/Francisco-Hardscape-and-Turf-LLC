@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e5e7eb"/>
+      <stop offset="55%" stop-color="#9ca3af"/>
+      <stop offset="100%" stop-color="#4b5563"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#92400e"/>
+      <stop offset="50%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,0)">
+    <!-- Wooden handle -->
+    <rect x="20" y="2" width="6" height="11" rx="1.5" fill="url(#wood)" stroke="#451a03" stroke-width="0.6" transform="rotate(45 23 7.5)"/>
+    <!-- Metal ferrule -->
+    <rect x="17.5" y="13" width="5" height="3.5" rx="0.5" fill="#52525b" stroke="#27272a" stroke-width="0.5" transform="rotate(45 20 14.75)"/>
+    <!-- Trowel scoop blade (pointed tip at bottom-left) -->
+    <path d="M 2 30 L 11 13 L 22 19 L 13 28 Z" fill="url(#metal)" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round"/>
+    <!-- Highlight on blade -->
+    <path d="M 5 27 L 11 16" stroke="#f3f4f6" stroke-width="0.9" fill="none" opacity="0.85"/>
+  </g>
+</svg>

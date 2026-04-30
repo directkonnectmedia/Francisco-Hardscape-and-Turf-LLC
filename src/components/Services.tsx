@@ -8,79 +8,101 @@ const services = [
   {
     id: "hardscape",
     title: "Hardscape",
-    description: "Expertly designed and installed hardscaping to transform your outdoor space into a functional and beautiful living area.",
+    description:
+      "Expertly designed and installed hardscaping to transform your outdoor space into a functional and beautiful living area.",
     features: ["Patios", "Walkways", "Retaining Walls"],
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1761637823622-eaaaee0660db?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "travertine-pavers",
     title: "Travertine Pavers",
-    description: "Premium travertine paver installation providing elegant, slip-resistant, and heat-resistant surfaces perfect for Arizona weather.",
-    features: ["Pool Decks", "Driveways", "Courtyars"],
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2940&auto=format&fit=crop",
+    description:
+      "Premium travertine paver installation providing elegant, slip-resistant, and heat-resistant surfaces perfect for Arizona weather.",
+    features: ["Pool Decks", "Driveways", "Courtyards"],
+    image:
+      "https://images.unsplash.com/photo-1717160111930-b1a7ba2baf52?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "turf-installation",
     title: "Turf Installation",
-    description: "Lush, green, and maintenance-free professional artificial turf. Perfect for backyards, dog runs, and putting greens.",
+    description:
+      "Lush, green, and maintenance-free professional artificial turf. Perfect for backyards, dog runs, and surrounding swimming pools.",
     features: ["Pet-Friendly", "Water Conservation", "Always Green"],
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f09?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1707228700996-5862513fe7de?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "materials-delivery",
     title: "Materials Delivery",
-    description: "Reliable delivery of essential landscaping and hardscaping materials right to your project site.",
+    description:
+      "Reliable delivery of essential landscaping and hardscaping materials right to your project site.",
     features: ["Quarter Minus", "Gravel & Blocks", "Drywall"],
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1761898552506-5b14f17edcdf?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "landscape-lighting",
     title: "Custom Landscape Lighting",
-    description: "Highlight the beauty of your home and improve security with our custom-designed LED landscape lighting systems.",
+    description:
+      "Highlight the beauty of your home and improve security with our custom-designed LED landscape lighting systems.",
     features: ["Path Lighting", "Up-lighting", "Spotlights"],
-    image: "https://images.unsplash.com/photo-1598908314732-07113901949e?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1741646557129-eeb404155d65?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "yard-cleanups",
     title: "Yard Cleanups",
-    description: "Comprehensive yard cleanups to clear out debris, overgrowth, and prepare your outdoor spaces for the season.",
+    description:
+      "Comprehensive yard cleanups to clear out debris, overgrowth, and prepare your outdoor spaces for the season.",
     features: ["Debris Removal", "Pruning", "Refresh"],
-    image: "https://images.unsplash.com/photo-1689728318937-17d24bc0a65c?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1771317778033-3473a576c5e9?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "sprinkler-repairs",
     title: "Sprinkler Repairs",
-    description: "Fast and reliable sprinkler system diagnostics and repair to keep your natural plants healthy and hydrated.",
+    description:
+      "Fast and reliable sprinkler system diagnostics and repair to keep your natural plants healthy and hydrated.",
     features: ["Leak Repair", "Head Replacement", "Timer Setup"],
-    image: "https://images.unsplash.com/photo-1583344607736-224405374e2d?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1769339764809-522564cf34c9?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "weed-spraying",
     title: "Weed Spraying (Herbicide)",
-    description: "Effective herbicide treatments to eliminate and prevent invasive weeds from taking over your yard.",
+    description:
+      "Effective herbicide treatments to eliminate and prevent invasive weeds from taking over your yard.",
     features: ["Pre-emergent", "Spot Treatment", "Safe Application"],
-    image: "https://images.unsplash.com/photo-1592424001809-5b1068df6d05?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1775806383830-39512c641bd6?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "outdoor-barbecues",
     title: "Custom Outdoor Barbecues",
-    description: "Built-in outdoor BBQ islands customized to your cooking style and entertaining needs.",
+    description:
+      "Built-in outdoor BBQ islands customized to your cooking style and entertaining needs.",
     features: ["Stone Veneer", "Custom Counters", "Built-in Grills"],
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1762117361035-5cd4f9c24795?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "fire-pits",
     title: "Fire Pits",
-    description: "Warm up your chilly evenings with beautifully crafted custom fire pits, available in gas or wood-burning setups.",
+    description:
+      "Warm up your chilly evenings with beautifully crafted custom fire pits, available in gas or wood-burning setups.",
     features: ["Gas or Wood", "Seating Walls", "Safe & Stylish"],
-    image: "https://images.unsplash.com/photo-1533555543184-a14eb89115b0?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1654546493292-7df731737090?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: "cement-block-walls",
     title: "Cement Block Walls",
-    description: "Durable and strong cement block walls for privacy, security, and property division.",
+    description:
+      "Durable and strong cement block walls for privacy, security, and property division.",
     features: ["Privacy Walls", "Retaining Walls", "Stucco Finish"],
-    image: "https://images.unsplash.com/photo-1518457850871-ad0d41ca4eb0?q=80&w=2940&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1746160934129-36b73b974228?q=80&w=2000&auto=format&fit=crop",
   },
 ];
 

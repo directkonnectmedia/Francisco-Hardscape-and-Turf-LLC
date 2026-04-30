@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, MapPin, User } from "lucide-react";
+import LeafLogo from "./LeafLogo";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-2 group">
-              <span className="text-2xl mr-1">🌱</span>
+              <LeafLogo size={40} className="mr-1 shrink-0" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-brand-green bg-clip-text text-transparent group-hover:from-white group-hover:to-brand-green-hover transition-all leading-tight">
                   Francisco Hardscape

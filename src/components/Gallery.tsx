@@ -5,21 +5,81 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const previewPhotos = [
-  { id: 1, src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2940&auto=format&fit=crop", title: "Paver Walkways" },
-  { id: 2, src: "https://images.unsplash.com/photo-1598908314732-07113901949e?q=80&w=2940&auto=format&fit=crop", title: "Landscape Lighting" },
-  { id: 3, src: "https://images.unsplash.com/photo-1558904541-efa843a96f09?q=80&w=2940&auto=format&fit=crop", title: "Artificial Turf Pool" },
-  { id: 4, src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2940&auto=format&fit=crop", title: "Hardscape Patios" },
-  { id: 5, src: "https://images.unsplash.com/photo-1583344607736-224405374e2d?q=80&w=2940&auto=format&fit=crop", title: "Lush Backyards" },
-  { id: 6, src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2940&auto=format&fit=crop", title: "Custom BBQs" }
+  {
+    id: 1,
+    src: "https://images.unsplash.com/photo-1761637823622-eaaaee0660db?q=80&w=2000&auto=format&fit=crop",
+    title: "Paver Walkway",
+    category: "Paver Walkways",
+  },
+  {
+    id: 2,
+    src: "https://images.unsplash.com/photo-1741646557129-eeb404155d65?q=80&w=2000&auto=format&fit=crop",
+    title: "Garden Path Lighting",
+    category: "Landscape Lighting",
+  },
+  {
+    id: 3,
+    src: "https://images.unsplash.com/photo-1707228700996-5862513fe7de?q=80&w=2000&auto=format&fit=crop",
+    title: "Turf Around Pool",
+    category: "Artificial Turf",
+  },
+  {
+    id: 4,
+    src: "https://images.unsplash.com/photo-1769339764809-522564cf34c9?q=80&w=2000&auto=format&fit=crop",
+    title: "Pool Deck Pavers",
+    category: "Travertine Deck",
+  },
+  {
+    id: 5,
+    src: "https://images.unsplash.com/photo-1769632971243-b1dea63afeab?q=80&w=2000&auto=format&fit=crop",
+    title: "Decorative Pavers",
+    category: "Hardscape Detail",
+  },
+  {
+    id: 6,
+    src: "https://images.unsplash.com/photo-1775806383830-39512c641bd6?q=80&w=2000&auto=format&fit=crop",
+    title: "Stone Walkway",
+    category: "Paver Walkways",
+  },
 ];
 
 const expandedPhotos = [
-  { id: 7, src: "https://images.unsplash.com/photo-1533555543184-a14eb89115b0?q=80&w=2940&auto=format&fit=crop", title: "Fire Pits" },
-  { id: 8, src: "https://images.unsplash.com/photo-1518457850871-ad0d41ca4eb0?q=80&w=2940&auto=format&fit=crop", title: "Block Walls" },
-  { id: 9, src: "https://images.unsplash.com/photo-1689728318937-17d24bc0a65c?q=80&w=2940&auto=format&fit=crop", title: "Yard Cleanups" },
-  { id: 10, src: "https://images.unsplash.com/photo-1592424001809-5b1068df6d05?q=80&w=2940&auto=format&fit=crop", title: "Weed Control" },
-  { id: 11, src: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2940&auto=format&fit=crop", title: "Material Delivery" },
-  { id: 12, src: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?q=80&w=2940&auto=format&fit=crop", title: "Beautiful Landscapes" }
+  {
+    id: 7,
+    src: "https://images.unsplash.com/photo-1654546493292-7df731737090?q=80&w=2000&auto=format&fit=crop",
+    title: "Fire Pit Patio",
+    category: "Fire Pits",
+  },
+  {
+    id: 8,
+    src: "https://images.unsplash.com/photo-1762117360871-f11fbad00ee1?q=80&w=2000&auto=format&fit=crop",
+    title: "Outdoor Kitchen & Pool",
+    category: "Outdoor Living",
+  },
+  {
+    id: 9,
+    src: "https://images.unsplash.com/photo-1762117361035-5cd4f9c24795?q=80&w=2000&auto=format&fit=crop",
+    title: "Built-in BBQ Island",
+    category: "Custom BBQs",
+  },
+  {
+    id: 10,
+    src: "https://images.unsplash.com/photo-1758192838598-a1de4da5dcaf?q=80&w=2000&auto=format&fit=crop",
+    title: "Sunset Pool",
+    category: "Pool Hardscape",
+  },
+  {
+    id: 11,
+    src: "https://images.unsplash.com/photo-1771317778033-3473a576c5e9?q=80&w=2000&auto=format&fit=crop",
+    title: "Lush Pool Garden",
+    category: "Yard Maintenance",
+  },
+  {
+    id: 12,
+    src: "https://images.unsplash.com/photo-1746160934129-36b73b974228?q=80&w=2000&auto=format&fit=crop",
+    title: "Block Wall Project",
+    category: "Cement Block Walls",
+  },
 ];
 
 export default function Gallery() {
@@ -75,10 +135,10 @@ export default function Gallery() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               <div className="absolute inset-x-0 bottom-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <span className="text-brand-green font-semibold text-sm tracking-wider uppercase mb-1 block">
-                  Project
+                <span className="text-brand-green font-semibold text-xs sm:text-sm tracking-wider uppercase mb-1 block">
+                  {photo.category}
                 </span>
-                <h4 className="text-white text-xl font-bold">{photo.title}</h4>
+                <h4 className="text-white text-lg sm:text-xl font-bold">{photo.title}</h4>
               </div>
             </motion.div>
           ))}
@@ -111,10 +171,10 @@ export default function Gallery() {
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
                     <div className="absolute inset-x-0 bottom-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-brand-orange font-semibold text-sm tracking-wider uppercase mb-1 block">
-                        Gallery
+                      <span className="text-brand-orange font-semibold text-xs sm:text-sm tracking-wider uppercase mb-1 block">
+                        {photo.category}
                       </span>
-                      <h4 className="text-white text-xl font-bold">{photo.title}</h4>
+                      <h4 className="text-white text-lg sm:text-xl font-bold">{photo.title}</h4>
                     </div>
                   </motion.div>
                 ))}

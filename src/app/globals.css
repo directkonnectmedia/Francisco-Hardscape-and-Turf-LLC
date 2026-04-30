@@ -7,7 +7,7 @@
   --color-brand-black: #000000;
   --color-brand-gray: #111111;
   --color-brand-light-gray: #222222;
-  
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -26,4 +26,37 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Garden Trowel Cursor - only on devices with a real mouse pointer.
+   Touch / coarse pointer devices (phones, tablets) are unaffected, so the
+   site stays fully mobile-friendly. */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body {
+    cursor: url("/cursor-trowel.svg") 4 28, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="submit"],
+  input[type="button"],
+  select,
+  label[for],
+  summary {
+    cursor: url("/cursor-trowel-pointer.svg") 4 28, pointer;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="url"],
+  input[type="password"],
+  textarea {
+    cursor: text;
+  }
 }
